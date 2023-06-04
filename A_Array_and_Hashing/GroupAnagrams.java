@@ -16,8 +16,8 @@ public class GroupAnagrams {
                 hash[c - 'a']++;
             }
         String key = new String(Arrays.toString(hash));
-        map.computeIfAbsent(key, k -> new ArrayList<>());
-        map.get(key).add(s);
+        map.computeIfAbsent(key, k -> new ArrayList<>()).add(s);
+        // map.get(key).add(s);
         }
         res.addAll(map.values());
         return res;
